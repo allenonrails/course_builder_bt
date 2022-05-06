@@ -19,6 +19,16 @@ url: "" # the base hostname & protocol for your site, e.g. https://example.com
 permalink: pretty
 template_engine: erb
 
+collections:
+  courses:
+    output: true
+    relations:
+      has_many: units
+  units:
+    output: true
+    relations:
+      has_many: courses
+
 # Other options you might want to investigate:
 #
 # base_path: "/" # the subpath of your site, e.g. /blog. If you set this option,
